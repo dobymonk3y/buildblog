@@ -6,10 +6,10 @@
     <title>Laravel @yield('title')</title>
 
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css"> -->
     <!-- 自定义CSS样式加载 -->
     {!! Html::style('css/style.css') !!}
-
+    {!! Html::style('css/bootstrap.min.css') !!}
     @yield('styleshteets')
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
