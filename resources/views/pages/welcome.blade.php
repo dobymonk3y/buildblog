@@ -26,7 +26,8 @@
         <div class="post div-margin-top-15">
             <h3>{{ $post->title }}</h3>
             <p>{{ substr($post->body,0,199) }}{{ strlen($post->body) > 199 ? "..." : " " }}</p>
-            <a href="posts/{{$post->id}}" class="btn btn-primary">Read More&nbsp>></a>
+            <!-- <a href="posts/{{$post->id}}" class="btn btn-primary">Read More&nbsp>></a> -->
+            <a href="{{url('/blog/'.$post->slug)}}" class="btn btn-primary">Read More&nbsp>></a>
             <!-- {!! Html::linkRoute('posts.show','Read More >>',$post->id,array('class'=>'btn btn-primary')) !!} -->
         </div>
         @endforeach
