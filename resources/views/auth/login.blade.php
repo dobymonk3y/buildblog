@@ -6,7 +6,7 @@
 
 <div class="row">
 	<div class="col-md-6 col-md-offset-3">
-		{!! Form::open() !!}
+		{!! Form::open(['url' => '/auth/login', 'method' => 'post']) !!}
 
 		{!! Form::label('email','Email:') !!}
 		{!! Form::email('email',null,['class'=>'form-control']) !!}
