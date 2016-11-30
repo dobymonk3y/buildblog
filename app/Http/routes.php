@@ -13,6 +13,15 @@ Route::group(['middleware' => ['web']],function(){
 	Route::get('auth/register','Auth\AuthController@getRegister');
 	Route::post('auth/register','Auth\AuthController@postRegister');
 
+
+    // 密码重置链接的路由...
+    Route::get('password/email', 'Auth\PasswordController@getEmail');
+    Route::post('password/email', 'Auth\PasswordController@postEmail');
+
+    // 密码重置的路由...
+    Route::get('password/reset/{token}', 'Auth\PasswordController@getReset');
+    Route::post('password/reset', 'Auth\PasswordController@postReset');
+
 	Route::get('/','PageController@getIndex');
 	Route::get('index','PageController@getIndex');
 	Route::get('about','PageController@getAbout');
@@ -24,3 +33,4 @@ Route::group(['middleware' => ['web']],function(){
 	Route::get('/blog',['as' => 'blog.index','uses' =>'BlogController@getIndex']);
 	Route::get('/blog/index',['as' => 'blog.index','uses' =>'BlogController@getIndex']);
 });
+

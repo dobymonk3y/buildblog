@@ -46,8 +46,6 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hello {{ Auth::user()->name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="{{route('posts.index')}}">Post</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
                         <li role="separator" class="divider"></li>
                         <li><a href="{{route('logout')}}">Log Out</a></li>
                     </ul>
