@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Session;
-use Illuminate\Support\Facades\Redirect;
 
 class CategoryController extends Controller
 {
@@ -53,7 +52,7 @@ class CategoryController extends Controller
             return redirect()->route('categories.index');
         }else{
             Session::flash('addCategoryFaild','The Category already exists!');
-            return Redirect::back();
+            return redirect()->back();
         }
     }
 
