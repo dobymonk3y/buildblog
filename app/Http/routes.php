@@ -13,7 +13,6 @@ Route::group(['middleware' => ['web']],function(){
 	Route::get('auth/register','Auth\AuthController@getRegister');
 	Route::post('auth/register','Auth\AuthController@postRegister');
 
-
     // 密码重置链接的路由...
     Route::get('password/email', 'Auth\PasswordController@getEmail');
     Route::post('password/email', 'Auth\PasswordController@postEmail');
@@ -32,5 +31,9 @@ Route::group(['middleware' => ['web']],function(){
 	Route::get('/blog/{slug}',['as' => 'blog.single', 'uses' => 'BlogController@getSingle'])->where('slug','[\w\d-\_]+');
 	Route::get('/blog',['as' => 'blog.index','uses' =>'BlogController@getIndex']);
 	Route::get('/blog/index',['as' => 'blog.index','uses' =>'BlogController@getIndex']);
+
+	//Categories
+	Route::resource('categories','CategoryController',['except'=>['create']]);
+//	Route::resource('categories','CategoryController',['only'=>['create','index']]);
 });
 

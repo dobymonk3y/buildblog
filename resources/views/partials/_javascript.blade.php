@@ -13,5 +13,11 @@
         if(document.getElementById("deletePostSuccess")){
             document.getElementById("deletePostSuccess").style.display ="none";
         }
+        if(document.getElementById("addCategorySuccess")){
+            document.getElementById("addCategorySuccess").style.display ="none";
+        }
+        if(document.getElementById("addCategoryFaild")){
+            document.getElementById("addCategoryFaild").style.display ="none";
+        }
     }
 </script>

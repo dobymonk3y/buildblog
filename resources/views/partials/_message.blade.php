@@ -11,6 +11,24 @@
     </div>
 @endif
 
+@if(Session::has('addCategorySuccess'))
+    <div class="alert alert-success" role="alert" id="addCategorySuccess">
+        <strong>Success:</strong>{{  Session::get('addCategorySuccess') }}
+    </div>
+@endif
+
+@if(Session::has('addCategoryFaild'))
+    <div class="alert alert-danger" role="alert" id="addCategoryFaild">
+        <strong>Faild:</strong>{{  Session::get('addCategoryFaild') }}
+    </div>
+@endif
+
+@if(Session::has('deleteSuccess'))
+    <div class="alert alert-success" role="alert" id="deletePostSuccess">
+        <strong>Success:</strong>{{  Session::get('deleteSuccess') }}
+    </div>
+@endif
+
 @if(count($errors) > 0)
     <div class="alert alert-danger" role="alert">
         <strong>Errors:</strong>
