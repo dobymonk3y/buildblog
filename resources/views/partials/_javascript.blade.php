@@ -19,5 +19,8 @@
         if(document.getElementById("addCategoryFaild")){
             document.getElementById("addCategoryFaild").style.display ="none";
         }
+        if(document.getElementById("tagaddsuccess")){
+            document.getElementById("tagaddsuccess").style.display ="none";
+        }
     }
 </script>

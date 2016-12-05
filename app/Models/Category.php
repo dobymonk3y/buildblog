@@ -8,11 +8,9 @@ class Category extends Model
 {
     protected $table='categories';
 
-    /**
-     * @return array
-     */
     public function posts()
     {
-        return $this->hasMany('App\Models\Post');
+        // 关联模型 本表外键 外表外键
+        return $this->hasMany('App\Models\Post','id','category_id');
     }
 }

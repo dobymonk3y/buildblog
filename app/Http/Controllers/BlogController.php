@@ -10,6 +10,11 @@ use App\Models\Post;
 
 class BlogController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function getSingle($slug)
     {
         $post = Post::where('slug','=',$slug)->first();

@@ -29,6 +29,12 @@
     </div>
 @endif
 
+@if(Session::has('tagAddSuccess'))
+    <div class="alert alert-success" role="alert" id="tagaddsuccess">
+        <strong>Success:</strong>{{  Session::get('tagAddSuccess') }}
+    </div>
+@endif
+
 @if(count($errors) > 0)
     <div class="alert alert-danger" role="alert">
         <strong>Errors:</strong>
